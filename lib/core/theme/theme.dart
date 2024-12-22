@@ -343,8 +343,15 @@ class MaterialTheme {
           bodyColor: colorScheme.onSurface,
           displayColor: colorScheme.onSurface,
         ),
-        scaffoldBackgroundColor: colorScheme.background,
+        scaffoldBackgroundColor: colorScheme.surface,
         canvasColor: colorScheme.surface,
+        appBarTheme: AppBarTheme(
+          scrolledUnderElevation: 0,
+          surfaceTintColor: colorScheme.surface,
+          shadowColor: colorScheme.surface,
+          backgroundColor: colorScheme.surface,
+          titleTextStyle: textTheme.titleMedium,
+        ),
       );
 
   List<ExtendedColor> get extendedColors => [];

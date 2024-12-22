@@ -1,0 +1,22 @@
+{
+    "@@locale": "en",
+    "home": "Home",
+    "transactions": "Transactions",
+    "profile": "Profile",
+    "account": "Account",
+    "notification": "Notification",
+    "budget": "Budget",
+    "category": "Category",
+    "more": "More",
+    "about": "About",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System",
+    "logout": "Logout",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password"
+}

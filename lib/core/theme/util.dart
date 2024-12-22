@@ -14,6 +14,15 @@ TextTheme createTextTheme(String bodyFontString, String displayFontString) {
     labelLarge: bodyTextTheme.labelLarge,
     labelMedium: bodyTextTheme.labelMedium,
     labelSmall: bodyTextTheme.labelSmall,
+    titleLarge: bodyTextTheme.titleLarge?.copyWith(
+      fontWeight: FontWeight.w600,
+    ),
+    titleMedium: bodyTextTheme.titleMedium?.copyWith(
+      fontWeight: FontWeight.w600,
+    ),
+    titleSmall: bodyTextTheme.titleSmall?.copyWith(
+      fontWeight: FontWeight.w600,
+    ),
   );
   return textTheme;
 }

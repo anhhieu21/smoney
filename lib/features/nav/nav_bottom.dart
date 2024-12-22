@@ -25,13 +25,11 @@ class NavBottom extends ConsumerWidget {
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
-        onDestinationSelected: (index) {
-          ref.read(navProvider.notifier).changeIndex(index);
-        },
+        onDestinationSelected: ref.read(navProvider.notifier).changeIndex,
         destinations: NavBottomEnum.values
             .map((e) => NavigationDestination(
                   icon: Icon(e.icon),
-                  label: e.title,
+                  label: e.getTitle(context),
                 ))
             .toList(),
       ),

@@ -1,0 +1,22 @@
+{
+    "@@locale": "vi",
+    "home": "Trang chủ",
+    "transactions": "Giao dịch",
+    "profile": "Hồ sơ",
+    "account": "Tài khoản",
+    "notification": "Thông báo",
+    "budget": "Ngân sách",
+    "category": "Danh mục",
+    "more": "Thêm",
+    "about": "Giới thiệu",
+    "settings": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "theme": "Chủ đề",
+    "dark": "Tối",
+    "light": "Sáng",
+    "system": "Hệ thống",
+    "logout": "Đăng xuất",
+    "login": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu"
+}

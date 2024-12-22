@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:smoney/core/common/common.export.dart';
 
 /// Enum for Navigation Bottom
 enum NavBottomEnum {
@@ -15,4 +16,19 @@ enum NavBottomEnum {
     required this.title,
     required this.icon,
   });
+}
+
+extension NavBottomEnumExtension on NavBottomEnum {
+  String getTitle(BuildContext context) {
+    switch (this) {
+      case NavBottomEnum.home:
+        return context.l10n.home; // Replace with localized string
+      case NavBottomEnum.transaction:
+        return context.l10n.transactions; // Replace with localized string
+      case NavBottomEnum.budget:
+        return context.l10n.budget; // Replace with localized string
+      case NavBottomEnum.more:
+        return context.l10n.more; // Replace with localized string
+    }
+  }
 }
