@@ -1,6 +1,8 @@
 import 'package:animate_gradient/animate_gradient.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smoney/core/common/common.export.dart';
+import 'package:smoney/core/routes/route.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
@@ -33,7 +35,7 @@ class HeaderWidget extends StatelessWidget {
               context.colorScheme.secondary,
             ],
             child: ListTile(
-              onTap: () {},
+              onTap: () => context.pushNamed(AppRoute.login),
               title: Text(context.l10n.login),
               titleTextStyle: context.textTheme.titleLarge,
               subtitle: Text(context.l10n.moreSubtitle),
