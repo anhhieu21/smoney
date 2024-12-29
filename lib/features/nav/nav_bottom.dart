@@ -29,6 +29,7 @@ class NavBottom extends ConsumerWidget {
         destinations: NavBottomEnum.values
             .map((e) => NavigationDestination(
                   icon: Icon(e.icon),
+                  selectedIcon: Icon(e.selectIcon(context)),
                   label: e.getTitle(context),
                 ))
             .toList(),
