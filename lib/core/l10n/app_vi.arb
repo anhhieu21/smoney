@@ -45,5 +45,8 @@
     "title": "Tiêu đề",
     "moreSubtitle": "Đồng bộ dữ liệu, sao lưu và khôi phục dữ liệu với Smoney Pro",
     "importExportCSV": "Nhập xuất CSV",
-    "statisticsDetail": "Mọi số liệu thống kê chi tiết của bạn ở một nơi"
+    "statisticsDetail": "Mọi số liệu thống kê chi tiết của bạn ở một nơi",
+    "backup": "Sao lưu",
+    "restore": "Khôi phục",
+    "removeAccount": "Xóa tài khoản"
 }

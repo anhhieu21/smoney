@@ -45,5 +45,8 @@
     "title": "Title",
     "moreSubtitle": "Sync data, backup and restore data with Smoney Pro",
     "importExportCSV": "Import Export CSV",
-    "statisticsDetail": "All your detailed statistics in one place"
+    "statisticsDetail": "All your detailed statistics in one place",
+    "backup": "Backup",
+    "restore": "Restore",
+    "removeAccount": "Remove Account"
 }

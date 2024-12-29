@@ -51,9 +51,9 @@ class TopMenu extends StatelessWidget {
               child: WrapMenuItem<TopMenuEnum>(
                 onTap: () {},
                 item: item,
-                leading: (item) => Icon(item.icon),
-                title: (item, context) => item.getTitle(context),
-                subTitle: (item, context) => item.getSubtitle(context),
+                leading: Icon(item.icon),
+                title: item.getTitle(context),
+                subTitle: item.getSubtitle(context),
               ),
             );
           },

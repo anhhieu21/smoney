@@ -1,14 +1,18 @@
 import 'package:animate_gradient/animate_gradient.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smoney/core/common/common.export.dart';
 import 'package:smoney/core/routes/route.dart';
+import 'package:smoney/features/auth/provider/auth_provider.dart';
 
-class HeaderWidget extends StatelessWidget {
+class HeaderWidget extends ConsumerWidget {
   const HeaderWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authProvider);
+    final user = authState.user;
     return SliverToBoxAdapter(
       child: Container(
         margin: EdgeInsets.all(Dimens.size8),
@@ -16,7 +20,7 @@ class HeaderWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(Dimens.size8),
           boxShadow: [
             BoxShadow(
-              color: context.colorScheme.secondary.withValues(alpha: 0.5),
+              color: context.colorScheme.secondary.withValues(alpha: 0.3),
               blurRadius: Dimens.size4,
               offset: Offset(0, 2),
             ),
@@ -35,8 +39,11 @@ class HeaderWidget extends StatelessWidget {
               context.colorScheme.secondary,
             ],
             child: ListTile(
-              onTap: () => context.pushNamed(AppRoute.login),
-              title: Text(context.l10n.login),
+              onTap: () => context.pushNamed(
+                  authState.authStatus == AuthStatus.authenticated
+                      ? AppRoute.account
+                      : AppRoute.login),
+              title: Text(user?.email ?? context.l10n.login),
               titleTextStyle: context.textTheme.titleLarge,
               subtitle: Text(context.l10n.moreSubtitle),
             ),

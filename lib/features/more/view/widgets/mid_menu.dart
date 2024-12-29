@@ -78,8 +78,8 @@ class MidMenu extends StatelessWidget {
             return WrapMenuItem<MidMenuEnum>(
               onTap: () {},
               item: item,
-              leading: (item) => Icon(item.icon),
-              title: (item, context) => item.getTitle(context),
+              leading:Icon(item.icon),
+              title:  item.getTitle(context),
             );
           }),
     );
