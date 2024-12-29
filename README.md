@@ -1,16 +1,45 @@
-# smoney
+# Smoney
 
-A new Flutter project.
+Smoney is a personal finance management application designed to help you track your expenses, manage your budget, and achieve your financial goals.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Expense tracking
+- Budget management
+- Financial goal setting
+- Detailed reports and analytics
+- User-friendly interface
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/anhhieu21/smoney.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd smoney
+    ```
+3. Install dependencies:
+    ```sh
+    flutter pub get
+    ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
+
+1. Run the application:
+    ```sh
+    flutter run
+    ```
+
+## Contributing
+
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please contact us at support@smoney.com.
