@@ -53,7 +53,7 @@ class AccountMenu extends ConsumerWidget {
       case AccountMenuEnum.removeAccount:
         break;
       case AccountMenuEnum.logout:
-        ref.read(authProvider.notifier).signOut().whenComplete(() {
+        ref.read(authNotifierProvider.notifier).signOut().whenComplete(() {
           if (context.mounted) {
             context.pop();
           }

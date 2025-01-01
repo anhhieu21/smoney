@@ -1,8 +1,8 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part 'nav_provider.g.dart';
 
-final navProvider = NotifierProvider<NavProvider, int>(NavProvider.new);
-
-class NavProvider extends Notifier<int> {
+@riverpod
+class NavNotifier extends _$NavNotifier {
   @override
   int build() {
     return 0;

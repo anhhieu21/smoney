@@ -9,7 +9,7 @@ class AccountPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final authState = ref.watch(authProvider);
+    final authState = ref.watch(authNotifierProvider);
     final user = authState.user!;
     final avatar = user.userMetadata?['avatar_url'];
     final name = user.userMetadata?['name'];

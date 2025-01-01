@@ -16,7 +16,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.listenManual(authProvider, (previous, current) {
+      ref.listenManual(authNotifierProvider, (previous, current) {
         if (current.authStatus == AuthStatus.authenticated) {
           context.pop();
         }
@@ -30,7 +30,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     return Scaffold(
       body: Center(
         child: FilledButton.icon(
-          onPressed: ref.read(authProvider.notifier).googleSignIn,
+          onPressed: ref.read(authNotifierProvider.notifier).googleSignIn,
           icon: Icon(MingCute.google_line),
           label: Text(context.l10n.login),
         ),

@@ -1,13 +1,12 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:smoney/core/common/common.export.dart';
 import 'package:smoney/features/base/base_state.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' as supabase;
 
 part 'auth_state.dart';
+part 'auth_provider.g.dart';
 
-final authProvider =
-    NotifierProvider<AuthProvider, AuthState>(AuthProvider.new);
 final GoogleSignIn _googleSignIn = GoogleSignIn(
   serverClientId: serverClientId,
   scopes: [
@@ -16,9 +15,10 @@ final GoogleSignIn _googleSignIn = GoogleSignIn(
   ],
 );
 
-class AuthProvider extends Notifier<AuthState> {
+@riverpod
+class AuthNotifier extends _$AuthNotifier {
   @override
-  build() {
+  AuthState build() {
     final currentUser = supabase.Supabase.instance.client.auth.currentUser;
     final googleUser = _googleSignIn.currentUser;
     return AuthState(

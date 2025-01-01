@@ -11,7 +11,7 @@ class HeaderWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final authState = ref.watch(authProvider);
+    final authState = ref.watch(authNotifierProvider);
     final user = authState.user;
     return SliverToBoxAdapter(
       child: Container(

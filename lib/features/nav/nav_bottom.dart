@@ -12,7 +12,7 @@ class NavBottom extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final index = ref.watch(navProvider);
+    final index = ref.watch(navNotifierProvider);
     return Scaffold(
       body: IndexedStack(
         index: index,
@@ -25,7 +25,8 @@ class NavBottom extends ConsumerWidget {
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
-        onDestinationSelected: ref.read(navProvider.notifier).changeIndex,
+        onDestinationSelected:
+            ref.read(navNotifierProvider.notifier).changeIndex,
         destinations: NavBottomEnum.values
             .map((e) => NavigationDestination(
                   icon: Icon(e.icon),
