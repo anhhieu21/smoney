@@ -48,5 +48,17 @@
     "statisticsDetail": "All your detailed statistics in one place",
     "backup": "Backup",
     "restore": "Restore",
-    "removeAccount": "Remove Account"
+    "removeAccount": "Remove Account",
+    "addTransaction": "Add Transaction",
+    "addCategory": "Add Category",
+    "addBudget": "Add Budget",
+    "addGoal": "Add Goal",
+    "addLoan": "Add Loan",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "hi": "Hi there",
+    "netWorth": "Net Worth",
+    "wallet": "Wallet"
 }

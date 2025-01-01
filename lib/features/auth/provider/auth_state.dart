@@ -11,7 +11,7 @@ class AuthState extends BaseState {
     super.error,
   });
   AuthStatus authStatus;
-  supabase.User? user;
+  UserModel? user;
   GoogleSignInAccount? googleUser;
 
   @override
@@ -19,7 +19,7 @@ class AuthState extends BaseState {
     String? error,
     BaseStatus? status,
     AuthStatus? authStatus,
-    supabase.User? user,
+    UserModel? user,
     GoogleSignInAccount? googleUser,
   }) {
     return AuthState(

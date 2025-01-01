@@ -48,5 +48,18 @@
     "statisticsDetail": "Mọi số liệu thống kê chi tiết của bạn ở một nơi",
     "backup": "Sao lưu",
     "restore": "Khôi phục",
-    "removeAccount": "Xóa tài khoản"
+    "removeAccount": "Xóa tài khoản",
+    "addTransaction": "Thêm giao dịch",
+    "addCategory": "Thêm danh mục",
+    "addBudget": "Thêm ngân sách",
+    "addGoal": "Thêm mục tiêu",
+    "addLoan": "Thêm khoản vay",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "hi": "Xin chào",
+    "netWorth": "Tài sản ròng",
+    "wallet": "Ví"
 }

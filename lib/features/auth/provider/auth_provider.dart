@@ -1,6 +1,7 @@
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:smoney/core/common/common.export.dart';
+import 'package:smoney/core/models/user.model.dart';
 import 'package:smoney/features/base/base_state.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' as supabase;
 
@@ -19,13 +20,18 @@ final GoogleSignIn _googleSignIn = GoogleSignIn(
 class AuthNotifier extends _$AuthNotifier {
   @override
   AuthState build() {
+    UserModel? user;
     final currentUser = supabase.Supabase.instance.client.auth.currentUser;
     final googleUser = _googleSignIn.currentUser;
+    if (currentUser != null) {
+      user = UserModel.fromMap(currentUser.userMetadata);
+      user.detail = currentUser;
+    }
     return AuthState(
       authStatus: currentUser != null
           ? AuthStatus.authenticated
           : AuthStatus.unauthenticated,
-      user: currentUser,
+      user: user,
       googleUser: googleUser,
     );
   }
@@ -52,7 +58,7 @@ class AuthNotifier extends _$AuthNotifier {
     if (res.user != null) {
       state = state.copyWith(
         authStatus: AuthStatus.authenticated,
-        user: res.user,
+        user: UserModel.fromMap(res.user!.userMetadata),
       );
     } else {
       state = state.copyWith(authStatus: AuthStatus.unauthenticated);

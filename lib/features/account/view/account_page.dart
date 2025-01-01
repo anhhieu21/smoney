@@ -11,8 +11,8 @@ class AccountPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authNotifierProvider);
     final user = authState.user!;
-    final avatar = user.userMetadata?['avatar_url'];
-    final name = user.userMetadata?['name'];
+    final avatar = user.avatar;
+    final name = user.name;
     return Scaffold(
       appBar: AppBar(),
       body: Column(
@@ -20,11 +20,11 @@ class AccountPage extends ConsumerWidget {
           ListTile(
             leading: CircleAvatar(
               radius: Dimens.size32,
-              backgroundImage: NetworkImage(avatar ?? ''),
+              backgroundImage: NetworkImage(avatar),
             ),
             horizontalTitleGap: Dimens.size4,
             title: Text(name),
-            subtitle: Text(user.email ?? ""),
+            subtitle: Text(user.detail?.email ?? ''),
           ),
           AccountMenu(),
         ],

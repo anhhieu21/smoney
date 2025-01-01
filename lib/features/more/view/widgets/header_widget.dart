@@ -43,7 +43,7 @@ class HeaderWidget extends ConsumerWidget {
                   authState.authStatus == AuthStatus.authenticated
                       ? AppRoute.account
                       : AppRoute.login),
-              title: Text(user?.email ?? context.l10n.login),
+              title: Text(user?.detail?.email ?? context.l10n.login),
               titleTextStyle: context.textTheme.titleLarge,
               subtitle: Text(context.l10n.moreSubtitle),
             ),

@@ -344,7 +344,7 @@ class MaterialTheme {
           displayColor: colorScheme.onSurface,
         ),
         scaffoldBackgroundColor: colorScheme.surface,
-        canvasColor: colorScheme.surface,
+        canvasColor: colorScheme.primaryContainer,
         appBarTheme: AppBarTheme(
           scrolledUnderElevation: 0,
           surfaceTintColor: colorScheme.surface,
